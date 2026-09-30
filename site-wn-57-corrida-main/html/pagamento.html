@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Pagamento - RideFast</title>
+
+    <link rel="stylesheet" href="/css/pagamento.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- ✨ FUNDO FUTURISTA -->
+    <div class="background-glow"></div>
+
+    <nav>
+        <div class="logo">WN</div>
+
+        <div class="nav-links">
+            <a href="/html/inicial.html">Inicial</a>
+            <a href="#">Viajar</a>
+            <a href="#">Atividade</a>
+            <a href="#">Entrar</a>
+            <a href="#">Ajuda</a>
+        </div>
+
+        <button class="btn-nav">Cadastrar</button>
+    </nav>
+
+    <!-- CONTAINER PRINCIPAL -->
+    <main class="container">
+
+        <!-- TOPO -->
+        <section class="topo">
+            <h1>Pagamento</h1>
+            <p>Escolha sua forma de pagamento</p>
+        </section>
+
+        <!-- CORRIDA -->
+        <section class="corrida">
+            <div class="info">
+                <p class="texto">Valor da corrida</p>
+                <h2 id="valorCorrida">R$ 24,90</h2>
+            </div>
+
+            <div class="status">
+                ✔ Confirmado
+            </div>
+        </section>
+
+        <!-- PIX -->
+        <section class="pix-box">
+
+            <button class="pix" onclick="mostrarPix()">
+                <span>Pagamento via PIX</span>
+                <span>⚡</span>
+            </button>
+
+            <div id="pixArea" class="pix-area">
+                <h3>PIX Instantâneo</h3>
+
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=PIX-24,90" alt="QR Code PIX">
+
+                <p>Escaneie o QR Code para pagar</p>
+
+                <span class="pix-code">
+                    00020126580014BR.GOV.BCB.PIX...
+                </span>
+            </div>
+
+        </section>
+
+        <!-- CARTÃO -->
+        <section class="cartao">
+
+            <h3>Cartão de Crédito</h3>
+
+            <input type="text" placeholder="Número do cartão">
+
+            <div class="row">
+                <input type="text" placeholder="Validade">
+                <input type="text" placeholder="CVV">
+            </div>
+
+            <input type="text" placeholder="Nome no cartão">
+
+        </section>
+
+        <!-- BOTÃO FINAL -->
+        <button class="finalizar" onclick="finalizarPagamento()">
+            Finalizar Pagamento 🚀
+        </button>
+
+        <!-- SEGURANÇA -->
+        <footer class="seguro">
+            🔒 Pagamento protegido com criptografia de ponta a ponta
+        </footer>
+
+    </main>
+
+    <!-- SCRIPT -->
+    <script src="/javascript/pagamento.js"></script>
+
+</body>
+
+</html>

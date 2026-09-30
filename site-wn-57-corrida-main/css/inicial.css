@@ -1,0 +1,1013 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --pink: #ff2f8b;
+    --pink2: #ff5db1;
+    --dark: #0f0f12;
+    --white: #ffffff;
+    --gray: #bdbdbd;
+}
+
+body {
+    background: #fff7fb;
+    overflow-x: hidden;
+    color: white;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* ================================
+   HEADER - ESTILO IGUAL À HOME
+================================ */
+
+/* ================================
+   HEADER
+================================ */
+
+header {
+    width: 100%;
+    height: 58px;
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+}
+
+/* ================================
+   BOTÃO CADASTRE-SE
+================================ */
+
+/* ================================
+   BOTÃO CADASTRE-SE
+================================ */
+
+header .header-right .btn-menu {
+ width: 105px;
+    min-width: 105px;
+    height: 37px;
+    padding: 0;
+    margin: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #FF2D78;
+    color: #FFFFFF ;
+    border: none;
+    border-radius: 50px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 36px;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+    cursor: pointer;
+    box-sizing: border-box;
+    transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+
+header .header-right .btn-menu:hover {
+    background: #ff4a8c;
+    color: #fff !important;
+    transform: translateY(-1px);
+    box-shadow: 0 5px 18px rgba(255, 45, 120, 0.35);
+}
+
+header .btn-menu:hover {
+    background: #ff4a8c;
+    color: #FFFFFF;
+
+    transform: translateY(-1px);
+
+    box-shadow: 0 5px 18px rgba(255, 45, 120, 0.35);
+}
+
+header .btn-menu:active {
+    transform: translateY(0);
+}
+
+
+header .header-container {
+    width: 100%;
+    max-width: 1350px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 45px;
+    box-sizing: border-box;
+}
+
+/* LOGO */
+header .logo {
+    width: 105px;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    margin-right: 38px;
+    /* espaço entre logo e Inicial */
+}
+
+/* MENU AO LADO DA LOGO */
+header nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin: 0;
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+header nav a:hover {
+    color: #ff2d78;
+}
+
+/* PARTE DIREITA */
+header .header-right {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 29px;
+}
+
+/* IDIOMA */
+header .idioma-btn {
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 0;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+/* LINKS DIREITA */
+header .header-right a {
+    color: #fff;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    height: 18px;
+    white-space: nowrap;
+}
+
+header .header-right a:hover {
+    color: #ff2d78;
+}
+
+/* CADASTRE-SE */
+header .btn-menu {
+    min-width: 125px;
+
+    padding: 0 24px;
+    border: none;
+    border-radius: 25px;
+    background: #ff2d78;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+
+
+.idioma-btn {
+    background: #000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    padding: 8px 0;
+    border-radius: 16px;
+}
+
+.btn {
+    padding: 14px 34px;
+    border: none;
+    border-radius: 40px;
+    background: linear-gradient(45deg, var(--pink), var(--pink2));
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: .3s;
+    box-shadow: 0 10px 30px rgba(255, 47, 139, 0.4);
+}
+
+.btn:hover {
+    transform: translateY(-4px);
+}
+
+/* Botão PT-BR */
+#abrirIdioma {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+/* Tela do idioma */
+#modalIdioma {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    z-index: 9999;
+}
+
+/* Conteúdo */
+.conteudo-idioma {
+    max-width: 1000px;
+    margin: auto;
+    padding: 100px 30px;
+}
+
+.conteudo-idioma h1 {
+    font-size: 32px;
+    margin-bottom: 80px;
+}
+
+/* X */
+#fecharIdioma {
+    position: fixed;
+    top: 25px;
+    right: 40px;
+
+    background: none;
+    border: none;
+
+    font-size: 40px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+/* Opções */
+.idiomas {
+    display: flex;
+    gap: 150px;
+}
+
+.idioma {
+    background: none;
+    border: none;
+    font-size: 17px;
+    cursor: pointer;
+    text-align: left;
+    padding: 10px;
+}
+
+.idioma:hover {
+    text-decoration: underline;
+}
+
+button,
+a,
+.feature-card,
+.ride-option,
+.review {
+    transition: .35s ease;
+}
+
+a {
+    text-decoration: none;
+    /* tira o sublinhado */
+    color: inherit;
+    /* usa a cor do botão */
+}
+
+/* ================= HERO ================= */
+
+.hero {
+    min-height: 100vh;
+    gap: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 140px 8% 60px;
+    position: relative;
+    overflow: hidden;
+    background:
+        linear-gradient(rgba(0, 0, 0, .55), rgba(0, 0, 0, .65)),
+        url("/site-de-corrida-wn-57-main/site-wn-57-corrida-main/img/1000323972\ \(1\).png") center/cover;
+}
+
+.hero::before {
+    content: "";
+
+    position: absolute;
+    width: 600px;
+    height: 600px;
+
+    background: rgba(255, 47, 139, 0.2);
+
+    filter: blur(120px);
+
+    top: -200px;
+    right: -100px;
+}
+
+.hero-text {
+    flex: 1;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-text h1 {
+    font-size: 78px;
+    line-height: 1.1;
+    margin-bottom: 30px;
+    max-width: 650px;
+}
+
+.hero-text h1 span {
+    color: var(--pink);
+}
+
+.hero-text p {
+    color: #dddddd;
+    font-size: 20px;
+    line-height: 1.7;
+
+    max-width: 520px;
+
+    margin-bottom: 45px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.secondary-btn {
+    background: rgba(255, 255, 255, 0.08);
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+
+    backdrop-filter: blur(12px);
+}
+
+/* ================= PHONE ================= */
+
+.hero-image {
+    flex: 1;
+
+    display: flex;
+    justify-content: center;
+
+    position: relative;
+    z-index: 2;
+}
+
+.phone {
+    width: 390px;
+
+    border-radius: 45px;
+
+    padding: 12px;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    backdrop-filter: blur(20px);
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    transform: rotate(-5deg);
+
+    animation: float 4s ease-in-out infinite;
+
+    box-shadow:
+        0 20px 80px rgba(255, 47, 139, 0.25);
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: rotate(-5deg) translateY(0);
+    }
+
+    50% {
+        transform: rotate(-5deg) translateY(-15px);
+    }
+}
+
+.screen {
+    height: 720px;
+
+    border-radius: 35px;
+    overflow: hidden;
+
+    position: relative;
+}
+
+.map {
+    width: 100%;
+    height: 100%;
+
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.2),
+            rgba(0, 0, 0, 0.2)),
+        url('/site-de-corrida-wn-57-main/site-wn-57-corrida-main/img/ChatGPT\ Image\ 8\ de\ mai.\ de\ 2026\,\ 16_27_07.png') center/cover;
+}
+
+/* ================= CARD ================= */
+
+.ride-card {
+    position: absolute;
+
+    left: 18px;
+    right: 18px;
+    bottom: 18px;
+
+    background: rgba(255, 255, 255, 0.95);
+
+    backdrop-filter: blur(18px);
+
+    border-radius: 30px;
+
+    padding: 24px;
+
+    color: #111;
+}
+
+.ride-card h3 {
+    color: var(--pink);
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.ride-card p {
+    color: #555;
+    margin-bottom: 18px;
+}
+
+.driver {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    margin-bottom: 20px;
+}
+
+.driver img {
+    width: 55px;
+    height: 55px;
+
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.driver h4 {
+    font-size: 15px;
+}
+
+.driver span {
+    color: #777;
+    font-size: 13px;
+}
+
+/* ================= STATS ================= */
+
+.stats {
+    padding: 80px 8%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    background: linear-gradient(180deg, #181818, #101010);
+}
+
+.stat-box {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 30px;
+    padding: 40px;
+    text-align: center;
+    backdrop-filter: blur(14px);
+}
+
+.stat-box h2 {
+    color: #e4e4e4;
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+/* ================= FEATURES ================= */
+
+.features {
+    padding: 120px 8%;
+
+    background: linear-gradient(180deg, #111, #191919);
+}
+
+.feature-card {
+    cursor: pointer;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.section-title h2 {
+    font-size: 52px;
+    margin-bottom: 15px;
+}
+
+.section-title p {
+    color: #cfcfcf;
+}
+
+::selection {
+    background: var(--pink);
+    color: white;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+}
+
+
+.feature-card {
+    padding: 35px;
+
+    border-radius: 30px;
+
+    background: rgba(255, 255, 255, 0.05);
+
+    border: 1px solid rgba(255, 255, 255, 0.06);
+
+    backdrop-filter: blur(16px);
+
+    transition: .3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+}
+
+.icon {
+    width: 70px;
+    height: 70px;
+
+    border-radius: 22px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 30px;
+
+    margin-bottom: 24px;
+
+    background: linear-gradient(45deg,
+            var(--pink),
+            var(--pink2));
+}
+
+.feature-card h3 {
+    margin-bottom: 10px;
+}
+
+.feature-card p {
+    color: #cfcfcf;
+    line-height: 1.6;
+}
+
+/* ================= RIDES ================= */
+
+.rides {
+    padding: 120px 8%;
+
+    background: #121212;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+
+    gap: 30px;
+}
+
+.ride-option {
+    height: 340px;
+
+    border-radius: 35px;
+
+    overflow: hidden;
+
+    position: relative;
+
+    display: flex;
+    align-items: flex-end;
+
+    padding: 30px;
+
+    background-size: cover;
+    background-position: center;
+
+    transition: .4s;
+}
+
+.ride-option:hover {
+    transform: scale(1.03);
+}
+
+.ride-option::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(to top,
+            rgba(0, 0, 0, 0.85),
+            transparent);
+}
+
+.ride-content {
+    position: relative;
+    z-index: 2;
+}
+
+.ride-content h3 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+/* ================= REVIEWS ================= */
+
+.reviews {
+    padding: 120px 8%;
+
+    background: linear-gradient(180deg, #151515, #0d0d0d);
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+
+    gap: 30px;
+}
+
+.review {
+    padding: 35px;
+
+    border-radius: 30px;
+
+    background: rgba(255, 255, 255, 0.05);
+
+    backdrop-filter: blur(15px);
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.review p {
+    line-height: 1.7;
+    color: #ddd;
+
+    margin-bottom: 20px;
+}
+
+.review h4 {
+    color: var(--pink);
+}
+
+/* ================= DOWNLOAD ================= */
+
+.download {
+    padding: 100px 8%;
+
+    background:
+        linear-gradient(45deg,
+            #ff2f8b,
+            #ff5db1);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 30px;
+}
+
+.download h2 {
+    font-size: 54px;
+    margin-bottom: 15px;
+}
+
+.download p {
+    max-width: 550px;
+    line-height: 1.7;
+}
+
+footer {
+    padding: 35px;
+    text-align: center;
+    background: #0b0b0b;
+    color: #999;
+}
+
+/* ================= VOLTAR AO TOPO ================= */
+
+#topBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background: #ff2f8b;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 99999;
+}
+
+/* ===== MENU MOBILE ===== */
+
+.menu-toggle {
+    display: none;
+    font-size: 32px;
+    color: white;
+    cursor: pointer;
+    margin-left: auto;
+}
+
+/* MOBILE */
+@media (max-width: 980px) {
+
+    .menu-toggle {
+        display: block;
+        z-index: 1000;
+    }
+
+    nav {
+        position: fixed;
+        top: 0;
+        left: -100%;
+
+        width: 260px;
+        height: 100vh;
+
+        background: #111;
+
+        flex-direction: column;
+        gap: 25px;
+
+        padding: 80px 30px;
+
+        transition: 0.4s;
+
+        z-index: 999;
+    }
+
+    nav.active {
+        left: 0;
+    }
+
+    .btn {
+        display: none;
+    }
+}
+/* ================================
+   AVISO DE COOKIES
+================================ */
+
+.cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    min-height: 150px;
+
+    background: #fff;
+    color: #222;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 30px 7%;
+
+    z-index: 999999;
+
+    box-shadow: 0 -5px 25px rgba(0, 0, 0, 0.12);
+
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+/* Texto */
+
+.cookie-texto {
+    max-width: 800px;
+}
+
+.cookie-texto h3 {
+    font-size: 19px;
+    margin-bottom: 25px;
+    color: #222;
+}
+
+.cookie-texto p {
+    font-size: 17px;
+    line-height: 1.5;
+    color: #333;
+    margin: 0;
+}
+
+.cookie-texto strong {
+    font-weight: 700;
+}
+
+/* Botões */
+
+.cookie-botoes {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-left: 40px;
+}
+
+.cookie-aceitar,
+.cookie-recusar {
+    height: 76px;
+    padding: 0 38px;
+
+    border-radius: 24px;
+
+    font-size: 23px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: 0.25s;
+}
+
+/* Aceitar */
+
+.cookie-aceitar {
+    background: #ff2f8b;
+    color: white;
+    border: 2px solid #ff2f8b;
+}
+
+.cookie-aceitar:hover {
+    background: #ff2f8b;
+    border-color: #ff2f8b;
+    transform: translateY(-2px);
+}
+
+/* Recusar */
+
+.cookie-recusar {
+    background: white;
+    color: #222;
+    border: 2px solid #ff2f8b;
+}
+
+.cookie-recusar:hover {
+    background: #d1d0cd;
+}
+
+/* X */
+
+.cookie-fechar {
+    position: absolute;
+
+    top: 20px;
+    right: 35px;
+
+    background: none;
+    border: none;
+
+    font-size: 35px;
+    font-weight: 400;
+
+    color: #222;
+
+    cursor: pointer;
+}
+
+.cookie-fechar:hover {
+    color: #ff2f8b;
+}
+
+/* Quando desaparecer */
+
+.cookie-banner.esconder {
+    opacity: 0;
+    transform: translateY(100%);
+    pointer-events: none;
+}
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 800px) {
+
+    .cookie-banner {
+        flex-direction: column;
+        align-items: flex-start;
+
+        padding: 30px 25px;
+
+        gap: 25px;
+    }
+
+    .cookie-texto {
+        max-width: 100%;
+    }
+
+    .cookie-texto h3 {
+        margin-bottom: 15px;
+    }
+
+    .cookie-texto p {
+        font-size: 15px;
+    }
+
+    .cookie-botoes {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .cookie-aceitar,
+    .cookie-recusar {
+        flex: 1;
+        height: 55px;
+        font-size: 17px;
+    }
+
+    .cookie-fechar {
+        right: 15px;
+        top: 10px;
+    }
+}
+
+/* ================= RESPONSIVO ================= */
+
+@media(max-width: 980px) {
+
+    nav {
+        display: none;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text h1 {
+        font-size: 55px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .phone {
+        width: 340px;
+    }
+
+    .download {
+        text-align: center;
+        justify-content: center;
+    }
+}

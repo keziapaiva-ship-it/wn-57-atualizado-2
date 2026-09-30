@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WN57 - Sua corrida</title>
+  <link rel="stylesheet" href="/site-de-corrida-wn-57-main/site-wn-57-corrida-main/css/corrida.css">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+  <div id="mensagemLogin" class="mensagem-login">
+    <div class="caixa-login">
+      <h2>Faça login primeiro</h2>
+      <p>Você precisa fazer login antes de solicitar uma corrida.</p>
+      <button onclick="irParaLogin()">Fazer login</button>
+    </div>
+  </div>
+  <!-- MENU WN57 -->
+
+  <nav>
+
+    <div class="logo">
+      <img src="/site-de-corrida-wn-57-main/site-wn-57-corrida-main/img/Captura de tela 2026-09-08 150021.png"
+        alt="WN57">
+    </div>
+
+    <div class="links">
+      <a href="inicial.html">Início</a>
+      <a href="solicitar.html">Viajar</a>
+    </div>
+
+    <div class="direita">
+
+      <button class="compartilhar" onclick="compartilharCorrida()">
+        <i class="fa-solid fa-share-nodes"></i>
+      </button>
+
+      <a href="login.html" class="login">
+        <i class="fa-regular fa-user"></i>
+        Fazer login
+      </a>
+
+      <a href="cadastro.html" class="cadastre">
+        Cadastre-se
+      </a>
+
+    </div>
+
+  </nav>
+
+
+  <!-- MAPA -->
+
+  <main class="corrida-container">
+
+    <section class="mapa-area">
+
+      <div id="map">
+        <div id="infoRota">
+          <strong id="distanciaRota">Calculando rota...</strong>
+          <span id="tempoRota">Aguarde...</span>
+        </div>
+      </div>
+
+      <div class="mapa-topo">
+
+
+    </section>
+
+
+    <!-- PAINEL DA CORRIDA -->
+
+    <section class="painel-corrida">
+
+      <div class="arrastar"></div>
+
+      <div class="titulo-painel">
+        <span class="tag">WN57</span>
+
+        <h1>Para onde vamos?</h1>
+
+        <p>Confira os dados da sua viagem.</p>
+      </div>
+
+
+      <!-- LOCALIZAÇÃO E DESTINO -->
+
+      <div class="rota-info">
+
+        <div class="rota-linha">
+
+          <div class="icone-rota origem-icone">
+            <i class="fa-solid fa-circle"></i>
+          </div>
+
+          <div class="rota-texto">
+            <span>Localização atual</span>
+            <strong id="mostrarOrigem">Carregando...</strong>
+          </div>
+
+        </div>
+
+        <div class="linha-vertical"></div>
+
+        <div class="rota-linha">
+
+          <div class="icone-rota destino-icone">
+            <i class="fa-solid fa-location-dot"></i>
+          </div>
+
+          <div class="rota-texto">
+            <span>Destino</span>
+            <strong id="mostrarDestino">Carregando...</strong>
+          </div>
+
+          <button class="editar-rota" onclick="voltarEditar()">
+            <i class="fa-solid fa-pen"></i>
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <!-- CATEGORIAS -->
+
+      <h2 class="titulo-categoria">Escolha seu veículo</h2>
+
+      <div class="categorias">
+
+        <div class="categoria ativa" onclick="selecionarCarro(this, 'WN', 15)">
+
+          <img src="/site-de-corrida-wn-57-main/site-wn-57-corrida-main/img/Gemini_Generated_Image_98smgp98smgp98sm.jpg"
+            alt="Carro WN">
+
+          <div class="categoria-info">
+            <h3>WN</h3>
+            <p>Confortável e econômico</p>
+            <span>4 passageiros</span>
+          </div>
+
+          <strong class="preco">R$ 15,00</strong>
+
+        </div>
+
+
+        <div class="categoria" onclick="selecionarCarro(this, 'Black', 25)">
+
+          <img
+            src="/site-de-corrida-wn-57-main/site-wn-57-corrida-main/img/ChatGPT Image 9 de set. de 2026, 15_31_56.png"
+            alt="Carro WN Black">
+
+          <div class="categoria-info">
+            <h3>WN Black</h3>
+            <p>Mais conforto para você</p>
+            <span>4 passageiros</span>
+          </div>
+
+          <strong class="preco">R$ 25,00</strong>
+
+        </div>
+
+
+        <div class="categoria" onclick="selecionarCarro(this, 'Pet', 20)">
+
+          <img src="/site-de-corrida-wn-57-main/site-wn-57-corrida-main/img/Gemini_Generated_Image_98smgp98smgp98sm.jpg"
+            alt="Carro WN Pet">
+
+          <div class="categoria-info">
+            <h3>WN Pet</h3>
+            <p>Viaje com seu pet</p>
+            <span>4 passageiros</span>
+          </div>
+
+          <strong class="preco">R$ 20,00</strong>
+
+        </div>
+
+      </div>
+
+
+      <!-- RESUMO -->
+
+      <div class="resumo">
+
+        <div>
+          <span>Categoria escolhida</span>
+          <strong id="categoriaEscolhida">WN</strong>
+        </div>
+
+        <div>
+          <span>Valor estimado</span>
+          <strong id="valorCorrida">R$ 15,00</strong>
+        </div>
+
+      </div>
+
+
+      <!-- BOTÃO -->
+
+      <button class="btn-confirmar" onclick="confirmarCorrida()">
+        Confirmar corrida
+        <i class="fa-solid fa-arrow-right"></i>
+      </button>
+
+    </section>
+
+  </main>
+
+
+  <!-- SCRIPTS -->
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+  <script src="/site-de-corrida-wn-57-main/site-wn-57-corrida-main/javascript/corrida.js"></script>
+
+</body>
+
+</html>

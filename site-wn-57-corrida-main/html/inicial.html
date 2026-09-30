@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WN57 • Mobilidade Premium</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/site-de-corrida-wn-57-main/site-wn-57-corrida-main/css/inicial.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+
+            <img src="../img/Captura de tela 2026-09-08 150021.png" class="logo" alt="WN57">
+
+            <nav>
+                <a href="/site-de-corrida-wn-57-main/site-wn-57-corrida-main/html/inicial.html">Inicial</a>
+                <a href="/site-de-corrida-wn-57-main/site-wn-57-corrida-main/html/solicitar.html">Viajar</a>
+                <a href="/site-de-corrida-wn-57-main/site-wn-57-corrida-main/html/atividade.html">Atividade</a>
+                <a href="/site-de-corrida-wn-57-main/site-wn-57-corrida-main/html/sobre-nos.html">Sobre-nós</a>
+            </nav>
+
+            <div class="header-right">
+
+                <button class="idioma-btn">
+                    🌐 PT-BR
+                </button>
+
+                <a href="/site-de-corrida-wn-57-main/site-wn-57-corrida-main/html/ajuda.html">Ajuda</a>
+
+                <a href="/site-de-corrida-wn-57-main/site-wn-57-corrida-main/html/login.html">Fazer login</a>
+
+                <a href="/site-de-corrida-wn-57-main/site-wn-57-corrida-main/html/cadastro.html" class="btn-menu">
+                    Cadastre-se
+                </a>
+
+            </div>
+
+        </div>
+    </header>
+    <div id="map"></div>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <!-- HERO -->
+    <section class="hero">
+
+        <div class="hero-text">
+
+            <h1>
+                Sua corrida
+                <span>premium</span>
+            </h1>
+
+            <p>
+                Um aplicativo moderno, rápido e seguro.
+                Viaje com conforto em uma experiência extraordinária.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="/html/solicitar.html" class="btn">
+                    Pedir corrida
+                </a>
+
+                <a href="/site-de-corrida-wn-57-main/site-wn-57-corrida-main/html/ajuda.html" class="btn secondary-btn">
+                    Como funciona
+                </a>
+            </div>
+        </div>
+
+        <!-- PHONE -->
+        <div class="hero-image">
+
+            <div class="phone">
+
+                <div class="screen">
+
+                    <div class="map"></div>
+
+                    <div class="ride-card">
+
+                        <h3>WN57 Comfort</h3>
+
+                        <p>
+                            Motorista chegando • 3 min
+                        </p>
+
+                        <div class="driver">
+
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Foto da motorista">
+
+                            <div>
+                                <h4>Mariana Silva</h4>
+                                <span>HB20 • ABC-1234</span>
+                            </div>
+
+                        </div>
+
+                        <button class="btn" style="width:100%;">
+                            Confirmar corrida
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- STATS -->
+    <section class="stats">
+
+        <div class="stat-box">
+            <h2>+20k</h2>
+            <p>Corridas realizadas</p>
+        </div>
+
+        <div class="stat-box">
+            <h2>4.9★</h2>
+            <p>Avaliação dos usuários</p>
+        </div>
+
+        <div class="stat-box">
+            <h2>+3k</h2>
+            <p>Motoristas ativos</p>
+        </div>
+
+    </section>
+
+    <!-- FEATURES -->
+    <section class="features">
+
+        <div class="section-title">
+
+            <h2>Por que usar a WN57?</h2>
+
+            <p>
+                Mobilidade moderna, elegante e segura.
+            </p>
+
+        </div>
+
+        <div class="feature-grid">
+
+            <div class="feature-card">
+
+                <div class="icon">🚗</div>
+
+                <h3>Corridas rápidas</h3>
+
+                <p>
+                    Motoristas próximos em poucos segundos.
+                </p>
+
+            </div>
+
+            <div class="feature-card">
+
+                <div class="icon">📍</div>
+
+                <h3>Mapa em tempo real</h3>
+
+                <p>
+                    Veja sua rota ao vivo com GPS moderno.
+                </p>
+
+            </div>
+
+            <div class="feature-card">
+
+                <div class="icon">🛡️</div>
+
+                <h3>Mais segurança</h3>
+
+                <p>
+                    Motoristas verificados e suporte 24h.
+                </p>
+
+            </div>
+
+            <div class="feature-card">
+
+                <div class="icon">💳</div>
+
+                <h3>Pagamento fácil</h3>
+
+                <p>
+                    PIX, cartão ou dinheiro.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- RIDES -->
+    <section class="rides">
+
+        <div class="ride-option"
+            style="background-image:url('/site-de-corrida-wn-57-main/site-wn-57-corrida-main/img/WNN\ BLACK.jpg')">
+
+            <div class="ride-content">
+
+                <h3>WN Black</h3>
+
+                <p>
+                    Luxo e conforto premium.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="ride-option"
+            style="background-image:url('/site-de-corrida-wn-57-main/site-wn-57-corrida-main/img/wn\ confort.jpg')">
+
+            <div class="ride-content">
+
+                <h3>WN Comfort</h3>
+
+                <p>
+                    Viagens mais confortáveis.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="ride-option"
+            style="background-image:url('/site-de-corrida-wn-57-main/site-wn-57-corrida-main/img/WN\ ECONOMICO.jpg')">
+
+            <div class="ride-content">
+
+                <h3>WN Econômico</h3>
+
+                <p>
+                    Corridas rápidas e acessíveis.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- REVIEWS -->
+    <section class="reviews">
+
+        <div class="review">
+
+            <p>
+                “Aplicativo muito bonito e rápido.
+                A experiência parece app internacional.”
+            </p>
+
+            <h4>Amanda • ⭐ 5.0</h4>
+
+        </div>
+
+        <div class="review">
+
+            <p>
+                “Mapa incrível e motoristas muito educados.”
+            </p>
+
+            <h4>Fernanda • ⭐ 4.9</h4>
+
+        </div>
+
+        <div class="review">
+
+            <p>
+                “Visual premium e muito moderno.”
+            </p>
+
+            <h4>Julia • ⭐ 5.0</h4>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- DOWNLOAD -->
+    <section class="download">
+
+
+        <div>
+
+            <h2>Baixe o app WN57</h2>
+
+            <p>
+                Solicite sua corrida em segundos com uma plataforma moderna,
+                rápida e segura.
+            </p>
+
+        </div>
+
+        <button class="btn secondary-btn">
+            Download
+        </button>
+
+    </section>
+
+    <footer>
+        © 2026 WN57 • Todos os direitos reservados
+    </footer>
+    <button id="topBtn" title="Voltar ao topo">
+        ↑
+    </button>
+
+    </div>
+
+    <!-- AVISO DE COOKIES -->
+    <div class="cookie-banner" id="cookieBanner">
+
+        <button class="cookie-fechar" id="fecharCookie">×</button>
+        <div class="cookie-texto">
+            <h3>Nós utilizamos cookies</h3>
+
+            <p>
+                Nós utilizamos cookies para melhorar a sua experiência de navegação.
+                Ao aceitar, você concorda com a
+                <strong>Política de Privacidade</strong> e
+                <strong>Política de Cookies</strong> da 99.
+            </p>
+        </div>
+
+        <div class="cookie-botoes">
+            <button class="cookie-aceitar" id="aceitarCookie">
+                Aceitar
+            </button>
+
+            <button class="cookie-recusar" id="recusarCookie">
+                Recusar
+            </button>
+        </div>
+
+    </div>
+
+
+</body>
+
+<script src="/site-de-corrida-wn-57-main/site-wn-57-corrida-main/javascript/inicial.js"></script>
+
+</html>

@@ -1,0 +1,730 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    color: #111;
+    background: #fff;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+    height: 58px;
+
+    background: #050505;
+    color: white;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 8%;
+
+    gap: 50px;
+}
+
+.logo {
+    color: white;
+    text-decoration: none;
+
+    font-size: 28px;
+    font-weight: 700;
+
+    letter-spacing: -2px;
+}
+
+.logo span {
+    color: #ff2f92;
+
+    font-size: 15px;
+
+    vertical-align: top;
+    position: relative;
+    top: -5px;
+}
+
+nav {
+    display: flex;
+
+    gap: 30px;
+
+    flex: 1;
+}
+
+nav a {
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    transition: .3s;
+}
+
+nav a:hover,
+nav a.ativo {
+    color: #ff2f92;
+}
+
+.header-direita {
+    display: flex;
+
+    align-items: center;
+
+    gap: 23px;
+}
+
+.header-direita a {
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.btn-cadastro {
+    background: #ff2f92;
+
+    padding: 10px 20px;
+
+    border-radius: 25px;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 610px;
+
+    background: #f7f7f7;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 100px;
+
+    padding: 70px 8%;
+}
+
+.hero-texto {
+    max-width: 550px;
+}
+
+.tag {
+    color: #ff2f92;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+.hero h1 {
+    font-size: 58px;
+
+    line-height: 1.05;
+
+    margin: 18px 0 25px;
+}
+
+.hero h1 span {
+    color: #ff2f92;
+}
+
+.hero-texto p {
+    color: #555;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+
+    margin-bottom: 30px;
+}
+
+.btn-principal {
+    display: inline-block;
+
+    background: #000;
+
+    color: white;
+
+    text-decoration: none;
+
+    padding: 15px 25px;
+
+    border-radius: 5px;
+
+    font-weight: 600;
+
+    transition: .3s;
+}
+
+.btn-principal:hover {
+    background: #ff2f92;
+}
+
+
+/* =========================
+   CARD DE DESTINO
+========================= */
+
+.hero-card {
+    width: 360px;
+
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 15px 40px rgba(0,0,0,.12);
+}
+
+.card-titulo {
+    font-size: 20px;
+
+    font-weight: 700;
+
+    margin-bottom: 25px;
+}
+
+.campo {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+}
+
+.campo > span {
+    color: #111;
+
+    font-size: 18px;
+}
+
+.campo .rosa {
+    color: #ff2f92;
+}
+
+.campo small {
+    display: block;
+
+    color: #777;
+
+    font-size: 11px;
+}
+
+.campo strong {
+    display: block;
+
+    font-size: 14px;
+
+    margin-top: 3px;
+}
+
+.linha {
+    height: 25px;
+
+    border-left: 1px solid #ccc;
+
+    margin-left: 7px;
+}
+
+.btn-card {
+    display: block;
+
+    text-align: center;
+
+    background: #ff2f92;
+
+    color: white;
+
+    text-decoration: none;
+
+    padding: 13px;
+
+    margin-top: 25px;
+
+    border-radius: 5px;
+
+    font-weight: 600;
+}
+
+
+/* =========================
+   SEÇÃO
+========================= */
+
+.secao {
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding: 90px 20px;
+}
+
+.secao h2 {
+    font-size: 35px;
+}
+
+.subtitulo {
+    color: #666;
+
+    margin-top: 10px;
+
+    margin-bottom: 40px;
+}
+
+
+/* =========================
+   CARDS
+========================= */
+
+.cards {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.card {
+    padding: 35px;
+
+    background: #f5f5f5;
+
+    min-height: 260px;
+
+    transition: .3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 10px 25px rgba(0,0,0,.08);
+}
+
+.card.destaque {
+    border-top: 4px solid #ff2f92;
+}
+
+.icone {
+    font-size: 35px;
+
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    font-size: 19px;
+
+    margin-bottom: 12px;
+}
+
+.card p {
+    color: #666;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+.card a {
+    display: inline-block;
+
+    color: #111;
+
+    margin-top: 20px;
+
+    font-weight: 600;
+
+    text-decoration: none;
+}
+
+.card a:hover {
+    color: #ff2f92;
+}
+
+
+/* =========================
+   COMO FUNCIONA
+========================= */
+
+.como-funciona {
+    background: #050505;
+
+    color: white;
+
+    padding: 90px 10%;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 100px;
+}
+
+.como-texto h2 {
+    font-size: 45px;
+
+    margin: 15px 0 20px;
+}
+
+.como-texto p {
+    color: #aaa;
+
+    line-height: 1.7;
+
+    max-width: 450px;
+}
+
+.passos {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 30px;
+}
+
+.passo {
+    display: flex;
+
+    gap: 25px;
+
+    border-bottom: 1px solid #333;
+
+    padding-bottom: 25px;
+}
+
+.numero {
+    color: #ff2f92;
+
+    font-size: 17px;
+
+    font-weight: 700;
+}
+
+.passo h3 {
+    margin-bottom: 5px;
+}
+
+.passo p {
+    color: #999;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================
+   SEGURANÇA
+========================= */
+
+.seguranca {
+    max-width: 1100px;
+
+    margin: auto;
+
+    padding: 90px 20px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+.seguranca h2 {
+    font-size: 40px;
+
+    max-width: 550px;
+
+    margin: 15px 0;
+}
+
+.seguranca p {
+    color: #666;
+
+    max-width: 500px;
+
+    line-height: 1.7;
+}
+
+.seguranca a {
+    display: inline-block;
+
+    color: #111;
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+    margin-top: 20px;
+}
+
+.seguranca-icone {
+    width: 180px;
+    height: 180px;
+
+    background: #fff0f7;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 75px;
+}
+
+
+/* =========================
+   RODAPÉ
+========================= */
+
+.rodape {
+    background: #000;
+
+    color: white;
+
+    padding: 65px 5% 30px;
+}
+
+.rodape-container {
+    max-width: 1100px;
+
+    margin: auto;
+}
+
+.rodape-topo {
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-bottom: 60px;
+}
+
+.rodape-logo {
+    font-size: 30px;
+
+    font-weight: 700;
+
+    margin-bottom: 20px;
+}
+
+.rodape-topo a {
+    color: white;
+
+    text-decoration: none;
+}
+
+.endereco {
+    max-width: 350px;
+
+    color: #aaa;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+}
+
+.rodape-colunas {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 30px;
+
+    margin-bottom: 60px;
+}
+
+.rodape-coluna {
+    display: flex;
+
+    flex-direction: column;
+}
+
+.rodape-coluna h3 {
+    font-size: 14px;
+
+    margin-bottom: 15px;
+}
+
+.rodape-coluna a {
+    color: #aaa;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    margin-bottom: 10px;
+}
+
+.rodape-coluna a:hover {
+    color: white;
+}
+
+.rodape-bottom {
+    display: flex;
+
+    justify-content: space-between;
+
+    padding-bottom: 25px;
+
+    border-bottom: 1px solid #222;
+}
+
+.redes-sociais {
+    display: flex;
+
+    gap: 15px;
+}
+
+.redes-sociais a {
+    color: white;
+
+    text-decoration: none;
+}
+
+.localizacao {
+    display: flex;
+
+    gap: 20px;
+
+    color: #aaa;
+
+    font-size: 12px;
+}
+
+.rodape-direitos {
+    padding-top: 20px;
+
+    display: flex;
+
+    gap: 20px;
+
+    color: #777;
+
+    font-size: 11px;
+}
+
+.rodape-direitos a {
+    color: #777;
+
+    text-decoration: none;
+}
+
+
+/* =========================
+   RESPONSIVO
+========================= */
+
+@media (max-width: 900px) {
+
+    .header {
+        padding: 0 25px;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .hero {
+        flex-direction: column;
+
+        gap: 50px;
+    }
+
+    .hero h1 {
+        font-size: 45px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .como-funciona {
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+    }
+
+    .seguranca {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 40px;
+    }
+
+    .rodape-topo {
+        flex-direction: column;
+
+        gap: 30px;
+    }
+
+    .rodape-colunas {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+@media (max-width: 550px) {
+
+    .header-direita .idioma,
+    .header-direita > a:nth-child(2) {
+        display: none;
+    }
+
+    .hero {
+        padding: 60px 20px;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .hero-card {
+        width: 100%;
+    }
+
+    .secao {
+        padding: 60px 20px;
+    }
+
+    .como-funciona {
+        padding: 60px 20px;
+    }
+
+    .como-texto h2 {
+        font-size: 35px;
+    }
+
+    .rodape-colunas {
+        grid-template-columns: 1fr;
+    }
+
+    .rodape-bottom {
+        flex-direction: column;
+
+        gap: 20px;
+    }
+
+    .rodape-direitos {
+        flex-wrap: wrap;
+    }
+}
