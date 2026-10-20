@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>WN57 • Atividades</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/site-de-corrida-wn-57-main/site-wn-57-corrida-main/css/atividade.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            WN<span>57</span>
+        </div>
+
+        <nav>
+            <a href="/site-de-corrida-wn-57-main/site-wn-57-corrida-main/html/inicial.html">Inicial</a>
+            <a href="/site-de-corrida-wn-57-main/site-wn-57-corrida-main/html/solicitar.html">Viajar</a>
+            <a href="/site-de-corrida-wn-57-main/site-wn-57-corrida-main/html/atividade.html">Atividade</a>
+            <a href="/site-de-corrida-wn-57-main/site-wn-57-corrida-main/html/ajuda.html">Ajuda</a>
+        </nav>
+
+        <a href="/site-de-corrida-wn-57-main/site-wn-57-corrida-main/html/cadastro.html" class="btn">Cadastre-se</a>
+    </header>
+
+    <div class="top">
+        <h1>Suas atividades</h1>
+        <input type="text" id="busca" placeholder="Pesquisar corrida..." class="search">
+    </div>
+
+    <!-- ÚLTIMA CORRIDA -->
+    <section class="main-trip">
+        <div class="trip-content">
+            <h2>Última corrida</h2>
+            <p id="ultima-corrida">Você ainda não fez nenhuma corrida.</p>
+            <button class="btn" id="pedir-novamente" hidden>Pedir novamente</button>
+        </div>
+    </section>
+
+    <!-- LISTA (preenchida pelo JavaScript) -->
+    <section class="trips" id="lista-corridas"></section>
+
+    <script src="/site-de-corrida-wn-57-main/site-wn-57-corrida-main/javascript/atividade.js"></script>
+</body>
+
+</html>
