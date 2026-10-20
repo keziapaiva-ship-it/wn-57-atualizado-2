@@ -324,7 +324,7 @@ a {
     overflow: hidden;
     background:
         linear-gradient(rgba(0, 0, 0, .55), rgba(0, 0, 0, .65)),
-        url("/site-de-corrida-wn-57-main/site-wn-57-corrida-main/img/1000323972\ \(1\).png") center/cover;
+        url("/site-de-corrida-wn-57-main/site-wn-57-corrida-main/img/carro.rosa.png") center/cover;
 }
 
 .hero::before {
@@ -444,7 +444,7 @@ a {
     background:
         linear-gradient(rgba(0, 0, 0, 0.2),
             rgba(0, 0, 0, 0.2)),
-        url('/site-de-corrida-wn-57-main/site-wn-57-corrida-main/img/ChatGPT\ Image\ 8\ de\ mai.\ de\ 2026\,\ 16_27_07.png') center/cover;
+        url('/site-de-corrida-wn-57-main/site-wn-57-corrida-main/img/imagem\ do\ celular.png') center/cover;
 }
 
 /* ================= CARD ================= */

@@ -6,37 +6,85 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro Cliente - Objetivo principal - WN57</title>
 
+    <!-- Estilos da página -->
     <link rel="stylesheet" href="/site-de-corrida-wn-57-main/site-wn-57-corrida-main/css/cadastro.css">
+    <!-- Menu e validação (carregar DEPOIS do cadastro.css) -->
+    <link rel="stylesheet" href="/site-de-corrida-wn-57-main/site-wn-57-corrida-main/css/menu-cadastro.css">
+    <link rel="stylesheet" href="/site-de-corrida-wn-57-main/site-wn-57-corrida-main/css/validacao-cadastro.css">
 
-    <!-- fonte -->
+    <!-- Fontes (Google Fonts) -->
     <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600;700&display=swap"
         rel="stylesheet" />
 </head>
 
 <body style="background: linear-gradient(135deg, #ec9cbd, #f5a0c2); margin:0;">
 
-    <!-- menu -->
+    <!-- =====================================================
+         01. MENU (cabeçalho)
+    ====================================================== -->
+
     <header>
 
+        <!-- ---------- Logo ---------- -->
         <div class="logo">
-            <span class="wn">WN</span>
-            <span class="num">57</span>
+            <img src="/site-de-corrida-wn-57-main/site-wn-57-corrida-main/img/logo/logown57.png" alt="WN57">
         </div>
 
+        <!-- ---------- Navegação principal ---------- -->
         <nav>
-            <a href="/html/inicial.html">Inicial</a>
-            <a href="/html/solicitar.html">Viajar</a>
-            <a href="/html/atividade.html">Atividade</a>
-            <a href="/html/login.html">Entrar</a>
-            <a href="/html/ajuda.html">Ajuda</a>
+            <a href="/site-de-corrida-wn-57-main/site-wn-57-corrida-main/html/inicial.html">
+                Inicial
+            </a>
+
+            <a href="/site-de-corrida-wn-57-main/site-wn-57-corrida-main/html/corrida.html">
+                Viajar
+            </a>
+
+            <a href="/site-de-corrida-wn-57-main/site-wn-57-corrida-main/html/atividade.html">
+                Atividade
+            </a>
+
+            <a href="/site-de-corrida-wn-57-main/site-wn-57-corrida-main/html/quemsomos.html">
+                Sobre-nós
+            </a>
         </nav>
 
-        <button class="btn-menu">Cadastrar</button>
+        <!-- ---------- Ações do usuário (direita) ---------- -->
+        <div class="menu-direita">
+
+            <!-- Idioma (PT-BR / EN) -->
+            <button class="idioma-btn" id="btnIdioma" type="button" data-no-i18n>
+                🌐 PT-BR
+            </button>
+
+            <!-- Ajuda -->
+            <a href="/site-de-corrida-wn-57-main/site-wn-57-corrida-main/html/ajuda.html">
+                Ajuda
+            </a>
+
+            <!-- Login (preenchido via JS quando o usuário está logado) -->
+            <div id="usuarioArea">
+                <a href="/site-de-corrida-wn-57-main/site-wn-57-corrida-main/html/login.html">
+                    Fazer login
+                </a>
+            </div>
+
+            <!-- Cadastro -->
+            <a href="/site-de-corrida-wn-57-main/site-wn-57-corrida-main/html/cadastro.html" class="btn-menu">
+                Cadastre-se
+            </a>
+
+        </div>
 
     </header>
+    <!-- /MENU -->
 
-    <!-- cadastro -->
+
+    <!-- =====================================================
+         02. CADASTRO (formulário)
+    ====================================================== -->
+
     <div class="container">
         <main>
             <section class="sessao">
@@ -45,6 +93,7 @@
 
                     <h1>Qual é seu número de telefone ou e-mail?</h1>
 
+                    <!-- ---------- Campos ---------- -->
                     <div class="informacoes">
 
                         <div class="nome">
@@ -80,7 +129,7 @@
 
                     </div>
 
-                    <!-- Google login -->
+                    <!-- ---------- Login com Google ---------- -->
                     <script src="https://accounts.google.com/gsi/client" async defer></script>
 
                     <div id="g_id_onload"
@@ -92,6 +141,7 @@
                         data-text="sign_in_with" data-shape="pill">
                     </div>
 
+                    <!-- ---------- Enviar ---------- -->
                     <button type="submit">Cadastrar</button>
 
                 </form>
@@ -99,10 +149,16 @@
             </section>
         </main>
     </div>
-
-    <script src="/javascript/cadastro.js"></script>
+    <!-- /CADASTRO -->
 
     <div class="route-card"></div>
+
+
+    <!-- =====================================================
+         03. SCRIPTS
+    ====================================================== -->
+
+    <script src="/site-de-corrida-wn-57-main/site-wn-57-corrida-main/javascript/cadastro.js"></script>
 
 </body>
 

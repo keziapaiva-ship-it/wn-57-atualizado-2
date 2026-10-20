@@ -455,3 +455,243 @@ nav a:nth-child(5) {
         transform: translateX(0);
     }
 }
+/* =====================================================
+   MENU (arquivo independente: carregar DEPOIS do cadastro.css)
+   Não depende de nenhuma regra do cadastro.css.
+====================================================== */
+
+/* ---------- Cabeçalho ---------- */
+header {
+    width: 100%;
+    height: 70px;
+    padding: 0 45px;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background: #12070d;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    font-family: 'DM Sans', sans-serif;
+}
+
+/* ---------- Logo ---------- */
+header .logo {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+header .logo img {
+    height: 45px;
+    width: auto;
+    display: block;
+}
+
+/* ---------- Navegação (ao lado da logo) ---------- */
+header nav {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-left: 50px;
+    margin-right: auto;
+}
+
+header nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    white-space: nowrap;
+    opacity: 1;
+    animation: none;
+    transition: color 0.3s;
+}
+
+header nav a:hover {
+    color: #ff2f8b;
+}
+
+/* ---------- Lado direito: idioma, ajuda, login e cadastro ---------- */
+header .menu-direita {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-left: auto;
+    flex-shrink: 0;
+}
+
+header .menu-direita a {
+    color: #ffffff;
+    text-decoration: none;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    white-space: nowrap;
+    transition: color 0.3s;
+}
+
+header .menu-direita a:hover {
+    color: #ff2f8b;
+}
+
+header #usuarioArea {
+    display: flex;
+    align-items: center;
+}
+
+/* ---------- Botão de idioma ---------- */
+header .idioma-btn {
+    color: #ffffff;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+/* ---------- Botão Cadastre-se ---------- */
+header .menu-direita .btn-menu {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    height: 38px;
+    padding: 0 22px;
+    border-radius: 30px;
+    background: linear-gradient(135deg, #ff2f8b, #ff4fa1);
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 700;
+    white-space: nowrap;
+    opacity: 1;
+    animation: none;
+    box-shadow: 0 8px 25px rgba(255, 47, 139, 0.35);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+header .menu-direita .btn-menu:hover {
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 12px 30px rgba(255, 47, 139, 0.45);
+}
+
+/* ---------- Espaço para o header fixo ---------- */
+.container {
+    padding-top: 100px;
+    padding-bottom: 40px;
+}
+
+/* ---------- Celular ---------- */
+@media (max-width: 900px) {
+    header {
+        padding: 0 16px;
+    }
+
+    header nav {
+        display: none;
+    }
+
+    header .menu-direita {
+        gap: 12px;
+    }
+}
+
+/* =====================================================
+   VALIDAÇÃO DO CADASTRO (colar no FIM do cadastro.css)
+====================================================== */
+
+/* ---------- Mensagem de erro embaixo do campo ---------- */
+.erro-msg {
+    display: block;
+    min-height: 16px;
+    margin-top: 6px;
+    font-size: 12px;
+    color: #d93025;
+}
+
+/* ---------- Campo de senha com botão de olho ---------- */
+.campo-senha {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+.campo-senha input {
+    width: 100%;
+    padding-right: 48px !important;
+}
+
+.container .sessao form .toggle-senha {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-35%);
+    width: 32px;
+    height: 32px;
+    padding: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    border-radius: 6px;
+    font-size: 16px;
+    line-height: 1;
+}
+
+/* ---------- Medidor de força da senha ---------- */
+.forca-senha {
+    margin-top: 6px;
+    width: 100%;
+}
+
+.forca-barra {
+    height: 6px;
+    border-radius: 6px;
+    background: rgba(0, 0, 0, 0.12);
+    overflow: hidden;
+}
+
+.forca-barra span {
+    display: block;
+    height: 100%;
+    width: 0;
+    border-radius: 6px;
+    transition: width .25s, background .25s;
+}
+
+.forca-texto {
+    display: block;
+    margin-top: 4px;
+    font-size: 12px;
+    color: #444;
+}
+
+/* ---------- Mensagem geral (sucesso / erro) ---------- */
+#cadastro-status {
+    min-height: 20px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+#cadastro-status.status-erro {
+    color: #d93025;
+}
+
+#cadastro-status.status-ok {
+    color: #1e8e3e;
+}
+
+/* ---------- Campo isca anti-robô (invisível) ---------- */
+.campo-isca {
+    position: absolute !important;
+    left: -9999px !important;
+    width: 1px !important;
+    height: 1px !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+}
